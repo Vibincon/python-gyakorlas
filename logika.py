@@ -28,7 +28,6 @@ elif kor == 0:
 elif kor < 18:
     print("nem ihat alkoholt")
 
-
 marka = input("milyen autod van (márka)?: ")
 szin = input("milyen szinü?: ")
 
@@ -40,23 +39,21 @@ if marka == "ferrari" and szin == "piros":
     print("gazdag vagy")
 if marka == "lada" and szin == "fehér":
     print("öreg vagy")
-if marka == "audi" and (szin == "fehér" or szin == "fekete") :
+if marka == "audi" and (szin == "fehér" or szin == "fekete"):
     print("kocsis vagy")
 if marka == "mercedes" and (szin == "fehér" or szin == "fekete"):
     faj = "cigány"
     print("akkor cigány vagy")
-if marka == "subaru" and (szin == "kék" or szin == "piros" ):
+if marka == "subaru" and (szin == "kék" or szin == "piros"):
     print("tatakae")
 
 if faj == "":
     faj = input("add meg a fajod?: ")
 
-
-if faj != "fehér":
-    print("dögölj meg")
-if faj == "ukrán":
+if faj == "fehér":
+    print("jó ember vagy")
+elif faj == "ukrán":
     print("menekülj")
-if faj == "cigány" :
+elif faj == "cigány":
     if input("a szüleid rokonok?: ") == "igen":
         print("teljesen cigány vagy")
-
