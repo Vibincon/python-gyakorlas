@@ -16,13 +16,13 @@ baratok = ["Patrik", "Balázs", "Márk", "Lippai", "Keszthelyi", "Réti", "Pista
 napok = ["hétfö", "kedd", "szerda", "csütörtök",
          "péntek", "szombat", "vasárnap"]
 i = 0
-j = 0
+
 while i < len(baratok):
     print(baratok[i])
     i = i + 1
-while j < len(napok):
-    print(napok[j])
-    j = j + 1
+
+for nap in napok:
+    print(nap)
 
 i = 0
 j = 0
