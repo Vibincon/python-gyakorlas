@@ -8,31 +8,42 @@ enemy_hp = 100
 player_atk = 10
 enemy_atk = 12
 
-print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
-print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
+while player_hp > 0 and enemy_hp > 0:
+    print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
+    print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
 
-print()
+    if player_hp > 0:
+        print()
 
-print("megütötted a(z) " + enemy_name)
+        print("megütötted a(z) " + enemy_name)
 
-bonus = random.randrange(-3, 3 + 1)
-enemy_hp = enemy_hp - (player_atk + bonus)
-if bonus == 3:
-    print("super effective volt")
-elif bonus == -3:
-    print("szar volt")
+        bonus = random.randrange(-3, 3 + 1)
+        enemy_hp = enemy_hp - (player_atk + bonus)
+        if bonus == 3:
+            print("super effective volt")
+        elif bonus == -3:
+            print("szar volt")
 
-print()
+    if enemy_hp > 0:
+        print()
 
-print("a(z) " + enemy_name + " megütött téged")
-bonus = random.randrange(-3, 3 + 1)
-player_hp = player_hp - (enemy_atk + bonus)
-if bonus == 3:
-    print("super effective volt")
-if bonus == -3:
-    print("szar volt")
+        print("a(z) " + enemy_name + " megütött téged")
+        bonus = random.randrange(-3, 3 + 1)
+        player_hp = player_hp - (enemy_atk + bonus)
+        if bonus == 3:
+            print("super effective volt")
+        if bonus == -3:
+            print("szar volt")
 
-print()
+    print()
 
-print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
-print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
+    print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
+    print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
+
+    if player_hp > 0 and enemy_hp > 0:
+        input()
+
+if player_hp > 0:
+    print("Gyöztél")
+else:
+    print("Game Over")
