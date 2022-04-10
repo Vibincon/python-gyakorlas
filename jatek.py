@@ -1,5 +1,10 @@
 import random
 
+
+def print_stats():
+    print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
+    print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
+
 enemies = ["golem", "goblin", "zsuzsi"]
 enemy_name = enemies[random.randrange(0, len(enemies))]
 
@@ -8,9 +13,9 @@ enemy_hp = 100
 player_atk = 10
 enemy_atk = 12
 
+
 while player_hp > 0 and enemy_hp > 0:
-    print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
-    print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
+    print_stats()
 
     if player_hp > 0:
         print()
@@ -37,8 +42,7 @@ while player_hp > 0 and enemy_hp > 0:
 
     print()
 
-    print("Player: " + str(player_hp) + "HP " + str(player_atk) + "ATK")
-    print("Enemy: " + str(enemy_hp) + "HP " + str(enemy_atk) + "ATK")
+    print_stats()
 
     if player_hp > 0 and enemy_hp > 0:
         input()
