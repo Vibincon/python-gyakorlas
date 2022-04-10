@@ -22,16 +22,16 @@ cukor_m = float(z[0])
 
 print("Bevásárlási lista:")
 
+osszeg = 0
+
 if kenyer_m < kenyer_k:
     print(str(kenyer_k - kenyer_m) + "kg" + " kenyér")
+    osszeg = osszeg + (kenyer_k - kenyer_m) * kenyer_ar
 if tej_m < tej_k:
     print(str(tej_k - tej_m) + "l" + " tej")
+    osszeg = osszeg + (tej_k - tej_m) * tej_ar
 if cukor_m < cukor_k:
     print(str(cukor_k - cukor_m) + "kg" + " cukor")
-
-osszeg = 0
-osszeg = osszeg + (kenyer_k - kenyer_m) * kenyer_ar
-osszeg = osszeg + (tej_k - tej_m) * tej_ar
-osszeg = osszeg + (cukor_k - cukor_m) * cukor_ar
+    osszeg = osszeg + (cukor_k - cukor_m) * cukor_ar
 
 print("Összeg: " + str(osszeg) + "Ft")
